@@ -70,8 +70,8 @@ library(RColorBrewer)
 
 # 2. DATA IMPORT
 # Replace filenames with your actual local file paths
-host_dna  <- readDNAStringSet("Ea_genomic.fna")
-phage_dna <- readDNAStringSet("PV930069_clean.fasta")
+host_dna  <- readDNAStringSet("bacterial_genomic.fna")
+phage_dna <- readDNAStringSet("phage.fasta")
 
 # 3. GENOMIC SYNTENY ANALYSIS (Mauve-Replacement)
 # ------------------------------------------------------------------------------
@@ -177,7 +177,7 @@ p_landscape <- ggplot(hotspot_df, aes(x = Position_Mb, y = Label, fill = Intensi
   geom_tile() +
   scale_fill_gradientn(colors = c("midnightblue", "yellow", "firebrick3")) +
   theme_minimal() +
-  labs(title = "Genomic Integration Hotspots", x = "Erwinia Genome Position (Mb)", y = "")
+  labs(title = "Genomic Integration Hotspots", x = "Bacteria Genome Position (Mb)", y = "")
 
 ggsave("Genomic_Integration_Landscape_300DPI.png", plot = p_landscape, width = 12, height = 3, dpi = 300)
 
@@ -185,9 +185,9 @@ ggsave("Genomic_Integration_Landscape_300DPI.png", plot = p_landscape, width = 1
 # ------------------------------------------------------------------------------
 cat("Step 4: Plotting Functional Impact Scores...\n")
 battle_data <- data.frame(
-  Accession = c("NP_040638.1 (Endolysin)", "NP_040618.1 (Integrase)", 
-                "NP_040619.1 (Excisionase)", "NP_040637.1 (Holin)", 
-                "NP_040578.1 (Portal)"),
+  Accession = c("... (Endolysin)", "... (Integrase)", 
+                "... (Excisionase)", "....1 (Holin)", 
+                "... (Portal)"),
   Score = c(98, 94, 88, 75, 35)
 )
 
