@@ -19,11 +19,6 @@ We discovered a perfect **34 bp sequence identity** between the phage and a host
 - **Mechanism:** This acts as the *attB* attachment site for site-specific recombination via the phage-encoded Integrase.
 
 
-
-### 3. Structural Survival (Electron Microscopy Correlation)
-Genomic data correlates with EM observations showing that **flagella remain intact** during lysis. The conflict map confirms that the phage lacks enzymes targeting the flagellin protein (**Host_1 / dnaA zone**), focusing purely on peptidoglycan degradation.
-
-
 ##  How to Run
 1. Clone the repo: `git clone https://github.com/yourusername/phage-conflict-map.git`
 2. Open `phage_host_analysis.R` in RStudio.
